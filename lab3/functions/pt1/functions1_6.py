@@ -4,6 +4,7 @@ def ok(s = input()):
     for i in range(len(msv)-1, -1, -1):
         s2 += msv[i] + " "
     return s2
-        
-print(ok())
+
+if __name__=="__main__": 
+    print(ok())
     

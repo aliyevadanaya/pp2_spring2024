@@ -3,6 +3,8 @@ def has_33(msv):
         if msv[i]==3 and msv[i+1]==3:
             return True
     return False
-        
-a = [0, 3, 3, 2, 3]
-print(has_33(a))
+     
+     
+if __name__=="__main__":  
+    a = [0, 3, 3, 2, 3]
+    print(has_33(a))

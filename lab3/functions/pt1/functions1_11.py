@@ -5,5 +5,7 @@ def is_palindrome(string):
     else:
         return "It is not a palindrome"
     
-word = "rabota"
-print(is_palindrome(word))
+    
+if __name__=="__main__":
+    word = "rabota"
+    print(is_palindrome(word))

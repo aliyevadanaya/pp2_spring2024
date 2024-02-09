@@ -16,5 +16,5 @@ def game():
         
         
         
-
-print(game())
+if __name__=="__main__":
+    print(game())
