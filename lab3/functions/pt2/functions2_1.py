@@ -18,6 +18,7 @@ def netflix(nameofmovie):
         if i["name"]==nameofmovie and i["imdb"] > 5.5:
             return True
     return False
-        
-name = input()
-print(netflix(name))
+
+if __name__=="__main__":  
+    name = input()
+    print(netflix(name))

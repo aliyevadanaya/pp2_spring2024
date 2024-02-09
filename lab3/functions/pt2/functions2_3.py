@@ -20,6 +20,6 @@ def category(zhanr):
             l.append(i["name"])
     return ', '.join(l)
             
-            
-a = "Romance"
-print(category(a))
+if __name__=="__main__":         
+    a = "Romance"
+    print(category(a))

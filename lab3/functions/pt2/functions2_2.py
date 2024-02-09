@@ -20,4 +20,5 @@ def sublist():
              good_films.append(i["name"])
     return good_films
 
-print(sublist())
+if __name__=="__main__":
+    print(sublist())

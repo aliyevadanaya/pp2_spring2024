@@ -25,7 +25,9 @@ def average(spisok):
     result = sum / len(spisok)
     return result
 
-msv = ["Exam", "We Two", "Love", "Detective"]
-print(average(msv))
+
+if __name__=="__main__":
+    msv = ["Exam", "We Two", "Love", "Detective"]
+    print(average(msv))
         
         

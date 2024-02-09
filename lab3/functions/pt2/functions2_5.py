@@ -24,7 +24,9 @@ def a_c(category):
     result = sum/klv
     return result
 
-smth = "Crime"
-print(a_c(smth))
-   
+
+if __name__=="__main__":
+    smth = "Crime"
+    print(a_c(smth))
+
         
