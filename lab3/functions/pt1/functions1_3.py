@@ -4,6 +4,4 @@ def solve(numheads, numlegs):
     return chicken, rat
 #chicken+rat = numheads
 #2chicken+4rat=numlegs
-
-if __name__=="__main__":
     
