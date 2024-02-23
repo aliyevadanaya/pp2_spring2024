@@ -7,5 +7,4 @@ for x in fruits:
 apple
 banana
 cherry
-
 """

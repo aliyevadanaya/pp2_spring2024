@@ -8,7 +8,7 @@ def game():
         num = int(input('Take a guess.\n'))
         cnt+=1
         if num < x:
-            print("\nYou gues is to low")
+            print("\nYou guess is to low")
         elif num > x:
             print("\nYour guess is too high.")
         else:

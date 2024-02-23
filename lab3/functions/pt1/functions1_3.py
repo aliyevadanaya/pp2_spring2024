@@ -5,3 +5,4 @@ def solve(numheads, numlegs):
 #chicken+rat = numheads
 #2chicken+4rat=numlegs
     
+    

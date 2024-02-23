@@ -1,4 +1,4 @@
-import functions1_1
+import functions1_1 
 a = int(input("write a gramm\n"))
 print(functions1_1.gramm_ounces((a)))
 
