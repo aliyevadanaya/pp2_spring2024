@@ -40,7 +40,7 @@ class Worm(GameObject):
         
     def draw(self, screen):
         GameObject.draw(self, screen)
-        pygame.draw.rect(screen, [147,147,147], pygame.Rect(self.points[0].X, self.points[0].Y, self.tile_width, self.tile_width))
+        pygame.draw.rect(screen, [219, 112, 147], pygame.Rect(self.points[0].X, self.points[0].Y, self.tile_width, self.tile_width))
         pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(self.points[0].X, self.points[0].Y, self.tile_width, self.tile_width), 1)
             
     def increase(self, pos):
