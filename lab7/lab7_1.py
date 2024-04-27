@@ -18,7 +18,7 @@ def draw_time(m, s):
     font = pygame.font.SysFont(None, 30)
     m, s = int(m), int(s)
     text = f'{m}:{s//10}{s%10}'
-    font = font.render(text, False, (0,0,255))
+    font = font.render(text, True, (0, 0, 255))
     screen.blit(font, (900, 700))
 done = True
 while done:
