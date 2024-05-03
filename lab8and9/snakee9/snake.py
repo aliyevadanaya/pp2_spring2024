@@ -4,6 +4,8 @@ from worm import Worm
 from food import Food
 from wall import Wall
 import random
+import forsnakemain2
+
 
 pygame.init()
 screen = pygame.display.set_mode((900, 600))
@@ -46,6 +48,11 @@ wall = Wall(20)
 
 
 lose = False
+pause = False
+
+name = input("please write your name\n")
+print(forsnakemain2.show(name))
+forsnakemain2.add_user(name)
 
 while not done:
         # Event filtering
@@ -53,9 +60,18 @@ while not done:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                     done = True
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                        #print("you pressed")
+                        if pause == False:    
+                            pause = True
+                        else:
+                            pause = False
+                        print(pause)
+                        
             else:
                 filtered_events.append(event)
-        if not lose:
+        if (not lose and not pause):
+                #print("condition1")
                 worm.process_input(filtered_events)
                 can_move = worm.can_going(wall.points)
                 # print(can_move)
@@ -63,6 +79,7 @@ while not done:
                         lose = True
                         continue
                 worm.move()
+                #print("worm can move")
 
                 pos = food.can_eat(worm.points[0])
                 if(pos != None):
@@ -87,7 +104,19 @@ while not done:
                 wall.draw(screen)
                 worm.draw(screen)
                 draw_score_level()
+                forsnakemain2.addinfo(name, level, SPEED, Score)
+        elif (not lose and pause):
+                create_background(screen, 900, 600)
+                food.draw(screen)
+                worm.draw(screen)
+                wall.draw(screen)
+                #currentinfo = forsnake2.show(name)
+                fontp = pygame.font.SysFont("Verdana", 40)
+                textp = fontp.render(forsnakemain2.show(name), True, (51, 0, 102))
+                screen.blit(textp, textp.get_rect(center = (900//2, 250)))
+                
         else:
+       
                 font = pygame.font.SysFont("Verdana", 60)
                 text = font.render("GAME OVER", True, (0, 0, 0))
                 screen.fill((255, 0, 0))

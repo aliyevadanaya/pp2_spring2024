@@ -17,6 +17,7 @@ class Worm(GameObject):
         self.points[0].X += self.DX * self.tile_width
         self.points[0].Y += self.DY * self.tile_width
         
+        
     def can_going(self, wall_points):
         new_headx = self.points[0].X +  self.DX * self.tile_width
         new_heady = self.points[0].Y +  self.DY * self.tile_width

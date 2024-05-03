@@ -5,7 +5,7 @@ class Point:
     def __init__(self, X, Y):
         self.X = X
         self.Y = Y
-        self.time = random.randint(10, 40)
+        self.time = random.randint(30, 70)
         
 class GameObject:
     def __init__(self, points, color, tile_width):
