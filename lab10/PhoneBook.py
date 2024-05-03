@@ -104,7 +104,7 @@ def delete_sql(inf):
     """
     cursor.execute(f_sql)
     # cursor.callproc("del_data", [inf])
-    cursor.execute(f'CALL del_data({inf})')
+    f'CALL del_data({inf})'
     connection.commit()
 
 def sel_pattern(pattern):
@@ -151,13 +151,13 @@ try:
     # connection.commit()
     # insert_from_console(cursor)
     # connection.commit()
-    querying_data(cursor)
-    connection.commit()
+    # querying_data(cursor)
+    # connection.commit()
     # update_data(cursor, 1, "Mary")
     # connection.commit()
     # insert_from_csv(cursor, 'csvfile.csv')
     # connection.commit()
-    # delete_sql("Rob")
+    delete_sql("Rob")
     # q_pag(50, 6)
     # deleting(cursor, 'Shelly')
     # connection.commit()
